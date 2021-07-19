@@ -1,0 +1,98 @@
+body {
+    font-size: Helvetica, Arial-sans;
+    background-color: rgb(34, 34, 34); /* gradient al main! */
+}
+
+/* sidebar scroll */
+.sidebar {
+    height: 90vh;
+    contain: content;
+    font-size: 0.9rem;
+    background-color: black;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: rgb(192, 190, 190);
+}
+
+
+.sidebar div.playlist-menu {
+    border-bottom: 1px solid grey;
+}
+
+.sidebar div.genres-menu ul {
+    overflow-y: scroll;
+    max-height: 400px;
+    height: 100%;
+}
+
+div.nav-avatar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* change color and border radius to dropdown btn */
+/* div.dd-btn {
+    border-radius: 100px;
+} */
+
+div.dropdown img.avatar-img {
+    max-width: 25px;
+    border-radius: 50%;
+}
+
+/* general layout */
+div.container--nowplay {
+    width: 100vw;
+    position: fixed;
+    bottom:0;
+    color: rgb(192, 190, 190);
+    background-color: inherit;
+}
+
+
+.album-img img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+
+.container--nowplay .song-info h6 {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;          no need for width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;  /* doesn't work without WIDTH */
+}
+
+
+div.play-btn {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+}
+
+/* div.play-btn div.triangle {
+    
+} */
+
+.container--nowplay .progress {
+    background-color: khaki;
+    height: 2px;
+}
+
+.volume-icons .volume-bar {
+    background-color: khaki;
+    height: 2px;
+}
