@@ -83,9 +83,22 @@ div.play-btn {
     top: 8px;
 }
 
-/* div.play-btn div.triangle {
-    
-} */
+div.play-btn:after {
+    content: '';
+    width: 0; /* make the container collapse*/
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px; 
+    border-color: transparent transparent transparent black; 
+    /* background-color: black; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+
+}
 
 .container--nowplay .progress {
     background-color: khaki;
@@ -96,3 +109,13 @@ div.play-btn {
     background-color: khaki;
     height: 2px;
 }
+
+
+
+
+/* Triangle trick:
+* = border-top 6 border-right 0 border-bottom 6 border-left 10
+* border top and bottom --> makes it higher/shorter
+* no need for border-right because it' pointing in that direction, and messes up with total width
+* (if left pointing arrow--> no need for border-left)
+* border-left = width of the arrow */
