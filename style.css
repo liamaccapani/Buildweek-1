@@ -1,6 +1,6 @@
 body {
     font-size: Helvetica, Arial-sans;
-    background-color: rgb(34, 34, 34); /* gradient al main! */
+    background-color: rgb(18, 18, 18); /* gradient al main! */
 }
 
 /* sidebar scroll */
@@ -17,6 +17,7 @@ body {
 
 .sidebar ul li a {
     color: rgb(192, 190, 190);
+    /* color: rgb(75, 75, 75);  */ 
 }
 
 
@@ -51,7 +52,7 @@ div.container--nowplay {
     position: fixed;
     bottom:0;
     color: rgb(192, 190, 190);
-    background-color: inherit;
+    background-color: rgb(24, 24, 24);
 }
 
 
