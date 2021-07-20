@@ -13,11 +13,13 @@
     
     <title>Buildweek - Spotify</title>
   </head>
+
   <body>
     <body>
-      <div class="container-fluid"> <!--sistemare padding/margins-->
+      <div class="container-fluid"> <!--tutto il body -->
         <div class="row">
-          <!--Sidebar-->
+
+          <!-- |----------------- Sidebar -----------------| -->
           <div class="col-2 p-0">
             <div class="sidebar">
              <div class="spotify-logo">
@@ -87,20 +89,22 @@
             </div> <!--sidebar-->
             
           </div> <!--col sidebar-->
+          <!-- |----------------- Sidebar end -----------------| -->
+
   
-          <!--Container all cards and rows-->
+          <!-- |----------------- Right column (main content) -----------------| -->
           <div class="col-10 p-0">
-            <div class="container container--main">
+            <div class="container container--main px-0"> <!-- *** -->
   
-              <!--arrows and avatar-->
-              <div class="container p-0 nav-avatar">
+              <!-- |----------------- Navbar (avatar) -----------------| -->
+              <div class="container nav-avatar d-flex justify-content-between"> <!-- *** ★★★-->
                 <!--freccette-->
                 <div class="arrows text-white">
                   <i class="bi bi-arrow-left-circle-fill"></i>
                   <i class="bi bi-arrow-right-circle-fill"></i>
                 </div> 
   
-                 <!--avatar/ log-in-->
+                <!--avatar/ log-in-->
                 <div class="avatar">
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" style="border-radius: 12rem;"> <!--Fix inline style anche per padding e bg-color!!!!-->
@@ -112,58 +116,160 @@
                     </ul>
                   </div>
                 </div>
-  
               </div> <!--container flex-->
-              <!-- <h1 class="text-white">Good morning</h1> -->
-                <div class="container--center--block">
-                  <div class="row">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <div class="row row-cols-6">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="row row-cols-6">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="row row-cols-6">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="img-fluid" />
-                          </div>
-                        </div>
-                      </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
+              <!-- |----------------- Navbar (avatar) end -----------------| -->
+              
+
+              <!-- WORKSPACE START -->
+              <!-- |----------------- Album overview -----------------| -->
+              <div class="container album-overview">
+
+                <div class="row">
+                  <div class="col-2 pl-3">
+                    <div class="album-cover">
+                      <img src="assets/acdc.jpg" alt="acdc">
                     </div>
                   </div>
-                  <div class="row"></div>
-                  <div class="row"></div>
+  
+                  <div class="col-8">
+            
+                    <h2>lololololololololololol</h2>
+            
+                  </div>
+
+                </div> <!--row-->
+              </div>
+              <!-- |----------------- Album overview end -----------------| -->
+
+              <!-- |----------------- Song icons -----------------| -->
+              <div class="container-fluid black-layer">
+                <div class="icons--container d-flex justify-content-start align-items-center pl-0"> <!-- ★★★ -->
+                    <div class="green-play--btn"></div>
+                    <div class="icons-wrapper mx-2">
+                      <i class="bi bi-heart px-2"></i>
+                      <i class="bi bi-three-dots"></i>
+                    </div>
                 </div>
-            </div>
+                <!-- |----------------- Song icons end -----------------| -->
+  
+  
+                <!-- |----------------- Title section -----------------| -->
+                <div class="title-section d-flex justify-content-between px-3 py-2"> <!-- ★★★ -->
+                  <span class="title"># TITLE</span>
+                  <span><i class="bi bi-clock"></i></span>
+                </div>
+                <!-- |----------------- Title section end -----------------| -->
+  
+                <!-- |----------------- Album songs -----------------| -->
+                <div class="container tracklist">
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      
+                    <div class="col length"> 
+                      <span>2:00</span>
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+
+                  <div class="row row-cols-2 justify-content-between align-items-center">
+                    <div class="col song">
+                      <span>1 </span>
+                      <h6>Song title 1</h6>
+                      <p>Artist</p>
+                    </div>
+                      <span>2:00</span>
+                    <div class="col length"> 
+                    </div>
+                  </div>
+                  
+                </div> <!-- Tracklist -->
+                <!-- |----------------- Album songs end -----------------| -->
+              </div>
+
+              
+              <!-- WORKSPACE END -->
+            
+            </div> <!--main -->
           </div> <!--col main-->
   
         </div> <!--row-->
@@ -172,10 +278,10 @@
   
       <!--Container now playing-->
       <div class="container-fluid container--nowplay px-4 py-1">
-        <div class="row row-cols-3 justify-content-between align-items-center"> <!--ROW PRINCIPALE CON LE 3 COLONNE PRINCIPALI-->
+        <div class="row row-cols-3 justify-content-between align-items-center"> <!--ROW PRINCIPALE CON LE 3 COLONNE PRINCIPALI--> <!-- ★★★ -->
         <!--Song name-->
         <div class="col"> <!--PRIMA COLONNA PRINCIPALE-->
-          <div class="row align-items-center">
+          <div class="row align-items-center"> <!-- ★★★ -->
             <div class="col-2">
               <div class="album-img">
                 <img src="assets/acdc.jpg" alt="acdc">
@@ -200,7 +306,7 @@
           
            <!--controllers--> 
           <!-- <div class="controllers-container"> -->
-            <div class="row flex-column justify-content-center"> <!--Fix center-->
+            <div class="row flex-column justify-content-center"> <!--Fix center--> <!-- ★★★ -->
               <div class="col">
                 <!--controllers-->
                 <div class="controllers-icons pb-1">
@@ -229,7 +335,7 @@
   
         <!--Volume icons-->
         <div class="col"> <!--TERZA COLONNA PRINCIPALE-->
-          <div class="row justify-content-end align-items-center">
+          <div class="row justify-content-end align-items-center"> <!-- ★★★ -->
             <div class="col-3 pl-4 pr-0">
               <div class="volume-icons">
                 <i class="bi bi-text-indent-left"></i>

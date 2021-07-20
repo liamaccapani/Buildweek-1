@@ -5,9 +5,10 @@
     --bg-nowplay: rgb(24, 24, 24);
 }
 
-body {
+body {  /* purple line over nowplaying!!!!! */
     font-size: Helvetica, Arial-sans;
-    background-color: var(--bg-body); /* gradient al main! */
+    background: var(--bg-body);
+    background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(167, 59, 135) 100%); /* gradient al main! */
 }
 
 /* -------> SIDEBAR <--------- */
@@ -99,10 +100,10 @@ body {
 
 /* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
 
-div.nav-avatar {
+/* div.nav-avatar {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 /* change color and border radius to dropdown btn */
 /* div.dd-btn {
@@ -112,6 +113,88 @@ div.nav-avatar {
 div.dropdown img.avatar-img {
     max-width: 25px;
     border-radius: 50%;
+}
+
+/* -------> ALBUM INFO ROW <--------- */
+
+.album-cover img {
+    object-fit: cover;
+    width: 10rem; 
+    box-shadow: 0px 0px 20px -1px black;
+}
+
+.album-infos-wrapper img {
+    object-fit: cover;
+    width: 1.2rem;
+    border-radius: 50%;
+}
+
+.album-overview {
+    color: white;
+}
+
+
+
+.black-layer {
+    position: relative;
+}
+
+.black-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(34, 33, 33, 0.364);
+
+}
+
+.title-section {
+    color: var(--grey-text);
+    border-bottom: 1px solid var(--grey-text);
+}
+
+.title-section span.title {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.tracklist {
+    color: var(--grey-text);
+}
+
+
+
+
+
+
+/* -------> ICONS CONTAINER <--------- */
+.icons--container .green-play--btn {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(29, 185, 84); /* change with spotify green */
+    border-radius: 50%;
+    position: relative;
+}
+
+.icons--container .green-play--btn::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 6px 0 6px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+}
+
+.icons--container .icons-wrapper {
+    color: var(--grey-text);
 }
 
 /* -------> NOW PLAYING <--------- */ /* general layout, progress bar width, flex not working properly */
