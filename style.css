@@ -1,27 +1,60 @@
+
+
 body {
     font-size: Helvetica, Arial-sans;
     background-color: rgb(18, 18, 18); /* gradient al main! */
 }
 
-/* sidebar scroll */
+/* -------> SIDEBAR <--------- */
+
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* align-content: flex-start; */
     height: 90vh;
     contain: content;
     font-size: 0.9rem;
     background-color: black;
+    padding-left: 1rem;
+}
+
+.sidebar .spotify-logo {
+    object-fit: cover;
+    /* align-self: center; */
 }
 
 .sidebar ul li {
     list-style: none;
+    font-size: 0.8rem;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(128, 128, 128, 0.604);  
+}
+
+.sidebar .icons-menu i {
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+.sidebar .icons-menu li,
+.sidebar .playlist-menu li {
+    font-weight: bolder;
 }
 
 .sidebar ul li a {
-    color: rgb(192, 190, 190);
-    /* color: rgb(75, 75, 75);  */ 
+    color: rgb(160, 160, 160);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: white;
 }
 
 
-.sidebar div.playlist-menu {
+.sidebar div.playlist-menu { /* touching the borders of the div */
     border-bottom: 1px solid grey;
 }
 
@@ -30,6 +63,36 @@ body {
     max-height: 400px;
     height: 100%;
 }
+
+ .sidebar div.genres-menu ul li { /* why without a works - color ellipsis dots*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:rgb(160, 160, 160);
+    width: 200px;
+ }
+
+.sidebar .install-app {
+    /* position: absolute; */
+    background-color: black;
+    color: rgb(160, 160, 160);
+    font-weight: bolder;
+    height: 1.5rem;
+    /* align-self: center; */
+    /* display: flex; */
+    /* justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    /* z-index: 9; */
+}
+
+.sidebar .install-app:hover {
+    background-color: rgba(128, 128, 128, 0.604);
+    color: white;
+}
+
+/* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
 
 div.nav-avatar {
     display: flex;
@@ -46,12 +109,14 @@ div.dropdown img.avatar-img {
     border-radius: 50%;
 }
 
+/* -------> NOW PLAYING <--------- */ /* general layout, progress bar width, flex not working properly */
+
 /* general layout */
 div.container--nowplay {
     width: 100vw;
     position: fixed;
-    bottom:0;
-    color: rgb(192, 190, 190);
+    bottom: 0;
+    color: rgb(160, 160, 160);
     background-color: rgb(24, 24, 24);
 }
 
@@ -68,10 +133,15 @@ div.container--nowplay {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
     overflow: hidden;          no need for width */
+    font-size: 0.9rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 250px;  /* doesn't work without WIDTH */
+}
+
+.container--nowplay .song-info p {
+    font-size: 0.7rem;
 }
 
 
@@ -91,23 +161,23 @@ div.play-btn:after {
     border-style: solid;
     border-width: 6px 0 6px 10px; 
     border-color: transparent transparent transparent black; 
-    /* background-color: black; */
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 3px;
     margin: auto;
-
 }
 
+
+/* width??*/
 .container--nowplay .progress {
-    background-color: khaki;
+    background-color: rgb(160, 160, 160);
     height: 2px;
 }
 
 .volume-icons .volume-bar {
-    background-color: khaki;
+    background-color: rgb(160, 160, 160);
     height: 2px;
 }
 
