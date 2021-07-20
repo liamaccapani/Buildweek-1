@@ -1,8 +1,13 @@
-
+:root {
+    --grey-text: rgb(160, 160, 160);
+    --bg-hover: rgba(128, 128, 128, 0.604);
+    --bg-body: rgb(18, 18, 18);
+    --bg-nowplay: rgb(24, 24, 24);
+}
 
 body {
     font-size: Helvetica, Arial-sans;
-    background-color: rgb(18, 18, 18); /* gradient al main! */
+    background-color: var(--bg-body); /* gradient al main! */
 }
 
 /* -------> SIDEBAR <--------- */
@@ -31,7 +36,7 @@ body {
 }
 
 .sidebar ul li:hover {
-    background-color: rgba(128, 128, 128, 0.604);  
+    background-color: var(--bg-hover);  
 }
 
 .sidebar .icons-menu i {
@@ -45,7 +50,7 @@ body {
 }
 
 .sidebar ul li a {
-    color: rgb(160, 160, 160);
+    color: var(--grey-text);
     text-decoration: none;
 }
 
@@ -55,7 +60,7 @@ body {
 
 
 .sidebar div.playlist-menu { /* touching the borders of the div */
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--grey-text);
 }
 
 .sidebar div.genres-menu ul {
@@ -68,14 +73,14 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color:rgb(160, 160, 160);
+    color: var(--grey-text);
     width: 200px;
  }
 
 .sidebar .install-app {
     /* position: absolute; */
     background-color: black;
-    color: rgb(160, 160, 160);
+    color: var(--grey-text);
     font-weight: bolder;
     height: 1.5rem;
     /* align-self: center; */
@@ -88,7 +93,7 @@ body {
 }
 
 .sidebar .install-app:hover {
-    background-color: rgba(128, 128, 128, 0.604);
+    background-color: var(--bg-hover);
     color: white;
 }
 
@@ -112,24 +117,24 @@ div.dropdown img.avatar-img {
 /* -------> NOW PLAYING <--------- */ /* general layout, progress bar width, flex not working properly */
 
 /* general layout */
-div.container--nowplay {
+ div.container--nowplay {
     width: 100vw;
     position: fixed;
     bottom: 0;
-    color: rgb(160, 160, 160);
-    background-color: rgb(24, 24, 24);
+    color: var(--grey-text);
+    background-color: var(--bg-nowplay);
 }
 
 
-.album-img img {
+ .album-img img {
     object-fit: cover;
     width: 50px;
     height: 50px;
 }
 
 
-.container--nowplay .song-info h6 {
-    /* display: -webkit-box;
+ .container--nowplay .song-info h6 {
+     /*display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
     overflow: hidden;          no need for width */
@@ -156,7 +161,7 @@ div.play-btn {
 
 div.play-btn:after {
     content: '';
-    width: 0; /* make the container collapse*/
+    width: 0; /* make the container collapse */
     height: 0;
     border-style: solid;
     border-width: 6px 0 6px 10px; 
@@ -169,19 +174,16 @@ div.play-btn:after {
     margin: auto;
 }
 
-
 /* width??*/
-.container--nowplay .progress {
-    background-color: rgb(160, 160, 160);
+ .container--nowplay .progress {
+    background-color: var(--grey-text);
     height: 2px;
 }
 
 .volume-icons .volume-bar {
-    background-color: rgb(160, 160, 160);
+    background-color: var(--grey-text);
     height: 2px;
 }
-
-
 
 
 /* Triangle trick:
@@ -190,3 +192,76 @@ div.play-btn:after {
 * no need for border-right because it' pointing in that direction, and messes up with total width
 * (if left pointing arrow--> no need for border-left)
 * border-left = width of the arrow */
+
+/* NOW PLAYING ALTERNATIVE */
+/* .container--nowplay {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    color: var(--grey-text);
+    background-color: var(--bg-nowplay);  
+    display: flex;
+    flex-direction: flex-row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+} */
+
+/* .album-img img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+} */
+
+/* .container--nowplay .song-info {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;          no need for width 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;  /* doesn't work without WIDTH 
+} */
+
+/* .container--nowplay .song-info h6 {
+    font-size: 0.9rem;
+}
+
+.container--nowplay .song-info p {
+    font-size: 0.7rem;
+} */
+
+/* div.play-btn {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+} */
+
+/* div.play-btn:after {
+    content: '';
+    width: 0; /* make the container collapse 
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px; 
+    border-color: transparent transparent transparent black; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+} */
+
+/* .container--nowplay .progress {
+    background-color: var(--grey-text);
+    height: 2px;
+}
+
+.volume-icons .volume-bar {
+    background-color: var(--grey-text);
+    height: 2px;
+} */
