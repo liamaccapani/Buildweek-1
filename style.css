@@ -1,0 +1,344 @@
+:root {
+    --grey-text: rgb(160, 160, 160);
+    --bg-hover: rgba(128, 128, 128, 0.604);
+    --bg-body: rgb(18, 18, 18);
+    --bg-nowplay: rgb(24, 24, 24);
+}
+
+body {
+    font-size: Helvetica, Arial-sans;
+    background-color: var(--bg-body); /* gradient al main! */
+}
+
+/* -------> SIDEBAR <--------- */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* align-content: flex-start; */
+    height: 90vh;
+    contain: content;
+    font-size: 0.9rem;
+    background-color: black;
+    padding-left: 1rem;
+}
+
+.sidebar .spotify-logo {
+    object-fit: cover;
+    /* align-self: center; */
+}
+
+.sidebar ul li {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--bg-hover);  
+}
+
+.sidebar .icons-menu i {
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+.sidebar .icons-menu li,
+.sidebar .playlist-menu li {
+    font-weight: bolder;
+}
+
+.sidebar ul li a {
+    color: var(--grey-text);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: white;
+}
+
+
+.sidebar div.playlist-menu { /* touching the borders of the div */
+    border-bottom: 1px solid var(--grey-text);
+}
+
+.sidebar div.genres-menu ul {
+    overflow-y: scroll;
+    max-height: 400px;
+    height: 100%;
+}
+
+ .sidebar div.genres-menu ul li { /* why without a works - color ellipsis dots*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--grey-text);
+    width: 200px;
+ }
+
+.sidebar .install-app {
+    /* position: absolute; */
+    background-color: black;
+    color: var(--grey-text);
+    font-weight: bolder;
+    height: 1.5rem;
+    /* align-self: center; */
+    /* display: flex; */
+    /* justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    /* z-index: 9; */
+}
+
+.sidebar .install-app:hover {
+    background-color: var(--bg-hover);
+    color: white;
+}
+/* -------> CENTER-CONTAINER <--------- */ 
+
+#goodMorn {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.card-morning {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(100, 97, 97, 0.267);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    border-radius: 3%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-morning img {
+    width: 2.5rem;
+  }
+  
+  .card-morning h5 {
+    padding-left: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+  
+  #sectionCenter {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  #sectionCenter2 {
+    font-size: 11px;
+    color: white;
+  }
+
+  h4.see-all {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.623);
+    font-weight: 600;
+    align-self: center;
+  }
+ 
+  .album-card {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .album-card img {
+    border-radius: 2%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .album-card h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .album-card p {
+    font-size: 0.8rem;
+  }
+  
+  .album-card-content {
+    background-color: rgba(56, 50, 50, 0.849);
+    padding: 0.5rem;
+  }
+  
+  .titleRow {
+    justify-content: space-between;
+  }
+  
+/* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
+
+div.nav-avatar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* change color and border radius to dropdown btn */
+/* div.dd-btn {
+    border-radius: 100px;
+} */
+
+div.dropdown img.avatar-img {
+    max-width: 25px;
+    border-radius: 50%;
+}
+
+/* -------> NOW PLAYING <--------- */ /* general layout, progress bar width, flex not working properly */
+
+/* general layout */
+ div.container--nowplay {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    color: var(--grey-text);
+    background-color: var(--bg-nowplay);
+}
+
+
+ .album-img img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+
+ .container--nowplay .song-info h6 {
+     /*display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;          no need for width */
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;  /* doesn't work without WIDTH */
+}
+
+.container--nowplay .song-info p {
+    font-size: 0.7rem;
+}
+
+
+div.play-btn {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+}
+
+div.play-btn:after {
+    content: '';
+    width: 0; /* make the container collapse */
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px; 
+    border-color: transparent transparent transparent black; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+}
+
+/* width??*/
+ .container--nowplay .progress {
+    background-color: var(--grey-text);
+    height: 2px;
+}
+
+.volume-icons .volume-bar {
+    background-color: var(--grey-text);
+    height: 2px;
+}
+
+
+/* Triangle trick:
+* = border-top 6 border-right 0 border-bottom 6 border-left 10
+* border top and bottom --> makes it higher/shorter
+* no need for border-right because it' pointing in that direction, and messes up with total width
+* (if left pointing arrow--> no need for border-left)
+* border-left = width of the arrow */
+
+/* NOW PLAYING ALTERNATIVE */
+/* .container--nowplay {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    color: var(--grey-text);
+    background-color: var(--bg-nowplay);  
+    display: flex;
+    flex-direction: flex-row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+} */
+
+/* .album-img img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+} */
+
+/* .container--nowplay .song-info {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;          no need for width 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;  /* doesn't work without WIDTH 
+} */
+
+/* .container--nowplay .song-info h6 {
+    font-size: 0.9rem;
+}
+.container--nowplay .song-info p {
+    font-size: 0.7rem;
+} */
+
+/* div.play-btn {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+} */
+
+/* div.play-btn:after {
+    content: '';
+    width: 0; /* make the container collapse 
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px; 
+    border-color: transparent transparent transparent black; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+} */
+
+/* .container--nowplay .progress {
+    background-color: var(--grey-text);
+    height: 2px;
+}
+.volume-icons .volume-bar {
+    background-color: var(--grey-text);
+    height: 2px;
+} */
