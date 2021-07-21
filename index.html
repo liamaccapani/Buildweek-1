@@ -7,12 +7,285 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="style.css">
     
     <title>Buildweek - Spotify</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid"> <!--sistemare padding/margins-->
+      <div class="row">
+        <!--Sidebar-->
+        <div class="col-2 p-0">
+          <div class="sidebar">
+           <div class="spotify-logo">
+             <img src="assets/spotify-logo.png" alt="spotify logo">
+            </div> <!--Da sistemare grandezza-->
+
+            <div class="icons-menu">
+              <ul class="p-1">
+                <li><a href="#"><i class="bi bi-house-door"></i> Home</a></li>
+                <li><a href="#"><i class="bi bi-search"></i> Search</a></li>
+                <li><a href="#"><i class="bi bi-bookmarks"></i> Your Library</a></li>
+              </ul>
+            </div> <!--menu con icone-->
+
+            <div class="playlist-menu">
+              <ul class="p-1">
+                <li><a href="#"><img src="assets/plus.jpg" alt=""> Create Playlist</a></li> <!--dimensioni immagini !!!!!!!!-->
+                <li><a href="#"><img src="assets/heart.jpg"  style="width: 32px" alt=""> Liked Songs</a></li>
+              </ul> 
+            </div>
+
+            <div class="genres-menu mt-2">
+              <ul class="p-1">
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+                <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                <li><a href="#">Funky Heavy Bluesy</a></li>
+                <li><a href="#">Metal Ballads</a></li>
+              </ul>
+            </div>
+
+            <div class="install-app p-1">
+              <i class="bi bi-cloud-arrow-down"></i>
+              <span>Install app</span>
+            </div>
+
+          </div> <!--sidebar-->
+          
+        </div> <!--col sidebar-->
+
+        <!--Container all cards and rows-->
+        <div class="col-10 p-0" style="background-image: url(queen.png);">
+          <div class="container container--main"> <!-- -->
+
+            <!--arrows and avatar-->
+            <div class="container p-0 nav-avatar">
+              <!--freccette-->
+              <div class="arrows text-white">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+                <i class="bi bi-arrow-right-circle-fill"></i>
+              </div> 
+
+               <!--avatar/ log-in-->
+              <div class="avatar">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" style="border-radius: 12rem;"> <!--Fix inline style anche per padding e bg-color!!!!-->
+                    <img src="assets/diego.jpg" class="avatar-img" alt="avatar">Diego "Ziba" Banovaz
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div> <!--container nav flex-->
+            <div class="jumbo">
+              <div class="jumbotron jumbotron-fluid mt-3 text-white py-0" style="background-color: transparent;">
+                <div class="container">
+                  <p class="lead">Verify Artist</p>
+                  <h1 class="display-4" style="font-weight: bold;">Queen</h1>
+                  <p class="lead">37,120,733 monthly listeners.</p>
+                </div>
+              </div>
+            </div> <!-- end jumbotron-->
+            <div class="container-fluid artist-songs-bg">
+              <div class="top-part-artist-songs mb-3 pt-3">
+                <div class="spotify-circle">
+                  <div class=""></div>
+                  <div class=""></div>
+                </div>
+                <div class="follow-class"> FOLLOW </div>
+                <div class="dots"> 
+                  <div class="small-circle"></div>
+                  <div class="small-circle"></div>
+                  <div class="small-circle"></div>
+                </div>
+            </div> <!-- end follow div-->
+            <div class="row">
+              <div class="col-12 col-md-9 col-lg-10">
+                <h2 class="section-heading artist-pick">Popular</h2>
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td><img src="assets/an-awesome-wave.png" alt=""></td>
+                      <td>Another One Bites the Dust - Remastered 2011</td>
+                      <td>1,012,332,444</td>
+                      <td>3.34</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">2</td>
+                      <td><img src="assets/arctic-monkeys.png" alt=""></td>
+                      <td>Bohemian Rhapsody - Remastered 2011</td>
+                      <td>1,334,514,321</td>
+                      <td>5.54</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">3</td>
+                      <td><img src="assets/chronic-dre.png" alt=""></td>
+                      <td>Don't Stop Me Now - Remastered 2011</td>
+                      <td>1,643,777,333</td>
+                      <td>3.20</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">4</td>
+                      <td><img src="assets/illimatic.png" alt=""></td>
+                      <td>Under Pressure - Remastered 2011</td>
+                      <td>900,225,096</td>
+                      <td>4.08</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">5</td>
+                      <td><img src="assets/hot-fuss.png" alt=""></td>
+                      <td>We Will Rock You - Remastered 2011</td>
+                      <td>705,225,721</td>
+                      <td>2.02</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> <!--end col left part-->
+
+               <div class="d-none d-md-inline col-md-3 col-lg-2 text-white">
+                      <h2 class="artist-pick">Artist pick</h2>
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="queen.png" style="padding-right: 5px;" width="50px" alt="">
+                        </div>
+                        <div class="col-8 side-description">
+                          <div class="posted">
+                          <img src="queen1.jpg" style="height: 20px; border-radius: 40%;" alt=""> 
+                          <p> Posted by Queen</p>
+                          </div>
+                          <h3>Queen Best of</h3><p>Playlist</p>
+                        </div>
+                      </div>
+                </div> <!--end col right part-->
+
+            </div> <!--end row with artist 2 columns-->
+
+          </div>  <!-- container main-->
+
+        </div> <!--col main da 10-->
+
+      </div> <!--row MAIN (IT DIVIDE ALL THE PAGE IN 2 COLS: ONE OF 2, ONE OF 10)-->
+    </div> <!--container-fluid-->
+    
+
+    <!--Container now playing-->
+    <div class="container-fluid container--nowplay px-4 py-1">
+      <div class="row row-cols-3 justify-content-between align-items-center"> <!--ROW PRINCIPALE CON LE 3 COLONNE PRINCIPALI-->
+      <!--Song name-->
+      <div class="col"> <!--PRIMA COLONNA PRINCIPALE-->
+        <div class="row align-items-center">
+          <div class="col-2">
+            <div class="album-img">
+              <img src="assets/acdc.jpg" alt="acdc">
+            </div>
+          </div>
+
+          <div class="col-8 song-info">
+            <h6 class="mb-0">Song name - altre coseeeeeeeeeeeeeeeeeeeeeeee</h6>
+            <p class="mb-0">central part</p> 
+          </div>
+
+          <div class="col-2 px-0">
+            <i class="bi bi-heart pr-2"></i>
+            <i class="bi bi-laptop"></i>
+          </div>
+
+        </div> <!--row-->
+      </div> <!--col-->
+
+      <!--Song buttons--> <!--ALIGN ROWS CONTENT (already tried align-items, not working)-->
+      <div class="col"> <!--SECONDA COLONNA PRINCIPALE-->
+        
+         <!--controllers--> 
+        <!-- <div class="controllers-container"> -->
+          <div class="row flex-column justify-content-center"> <!--Fix center-->
+            <div class="col">
+              <!--controllers-->
+              <div class="controllers-icons pb-1">
+                <i class="bi bi-shuffle"></i>
+                <i class="bi bi-ski p-start-fill"></i>
+                <div class="play-btn d-inline-block"></div>
+                <i class="bi bi-skip-end-fill"></i>
+                <i class="bi bi-arrow-clockwise"></i>
+              </div>
+            </div> <!--col-->
+
+              <div class="col">
+                <!--progress bar-->
+                <!-- <span>0:12</span> -->
+                <div class="progress mt-2">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- <span>3:21</span> -->
+              </div> <!--col-->
+            
+
+          </div> <!--row-->
+
+        <!-- </div> container -->
+      </div> <!--col-->
+
+      <!--Volume icons-->
+      <div class="col"> <!--TERZA COLONNA PRINCIPALE-->
+        <div class="row justify-content-end align-items-center">
+          <div class="col-3 pl-4 pr-0">
+            <div class="volume-icons">
+              <i class="bi bi-text-indent-left"></i>
+              <i class="bi bi-speaker-fill"></i>
+              <i class="bi bi-volume-up"></i>
+            </div>
+          </div>
+  
+          <div class="col-3 pl-0">
+            <div class="volume-bar">
+              <div class="progress">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
 
    
 
