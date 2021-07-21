@@ -10,6 +10,12 @@ body {
     background-color: var(--bg-body); /* gradient al main! */
 }
 
+/* -------> ALT NAVBAR <--------- */
+
+.alt-navbar .navbar-alt-color {
+    background-color: black;
+}
+
 /* -------> SIDEBAR <--------- */
 
 .sidebar {
@@ -97,18 +103,28 @@ body {
     color: white;
 }
 
-/* @media (max-width: 250px) {
-    .sidebar {
+@media (max-width: 999px) {
+    .sidebar, 
+    .container--main .nav-avatar {
       display: none;
     }
 
-} */
-
-/* @media (min-width: 575px) {
-    .sidebar {
-        display: inline;
+    .alt-navbar {
+        display: block;
     }
-} */
+
+}
+
+@media (min-width: 1000px) {
+    .sidebar,
+    .nav-avatar {
+        display: block;
+    }
+
+    .alt-navbar {
+        display: none;
+    }
+}
 
 
 /* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
@@ -123,9 +139,14 @@ div.nav-avatar {
     border-radius: 100px;
 } */
 
-div.dropdown img.avatar-img {
+div.avatar div.dropdown img.avatar-img {
     max-width: 25px;
     border-radius: 50%;
+}
+
+div.avatar div.dropdown .round-btn {
+    border-radius: 50px;
+    height: 38px;
 }
 
 /* -------> NOW PLAYING <--------- */ /* general layout, progress bar width, flex not working properly */
@@ -145,9 +166,7 @@ div.dropdown img.avatar-img {
 }
 
 
-
-
- .album-img img {
+.album-img img {
     object-fit: cover;
     width: 50px;
     height: 50px;
@@ -179,7 +198,7 @@ button.play-btn {
     height: 2rem;
     border-radius: 50%;
     position: relative;
-    top: 8px;
+    top: 0px;
 }
 
 button.play-btn:after {
