@@ -3,12 +3,13 @@
     --bg-hover: rgba(128, 128, 128, 0.604);
     --bg-body: rgb(18, 18, 18);
     --bg-nowplay: rgb(24, 24, 24);
+    --spotify-green: rgb(29, 185, 84);
 }
 
 body {  /* purple line over nowplaying!!!!! */
     font-size: Helvetica, Arial-sans;
-    background: var(--bg-body);
-    background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(167, 59, 135) 100%); /* gradient al main! */
+    /* background: var(--bg-body); */
+    background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(201, 184, 180) 100%); /* gradient al main! */
 }
 
 /* -------> SIDEBAR <--------- */
@@ -173,7 +174,7 @@ div.dropdown img.avatar-img {
 .icons--container .green-play--btn {
     width: 2rem;
     height: 2rem;
-    background-color: rgb(29, 185, 84); /* change with spotify green */
+    background-color: var(--spotify-green); /* change with spotify green */
     border-radius: 50%;
     position: relative;
 }
