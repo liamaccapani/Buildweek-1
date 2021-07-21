@@ -9,7 +9,26 @@
 body {  /* purple line over nowplaying!!!!! */
     font-size: Helvetica, Arial-sans;
     /* background: var(--bg-body); */
-    background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(201, 184, 180) 100%); /* gradient al main! */
+    background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(201, 184, 180) 100%);
+}
+
+/* -------> ALT NAVBAR <--------- */
+
+.alt-navbar .navbar-alt-color {
+    background-color: black;
+}
+
+.alt-navbar ul li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.alt-navbar ul li:hover {
+    background-color: var(--bg-hover);  
+}
+
+.alt-navbar ul li a:hover {
+    color: white;
 }
 
 /* -------> SIDEBAR <--------- */
@@ -99,21 +118,44 @@ body {  /* purple line over nowplaying!!!!! */
     color: white;
 }
 
+@media (max-width: 999px) {
+    .sidebar, 
+    .container--main .nav-avatar {
+      display: none;
+    }
+
+    .alt-navbar {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .sidebar,
+    .nav-avatar {
+        display: block;
+    }
+
+    .alt-navbar {
+        display: none;
+    }
+}
+
 /* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
 
-/* div.nav-avatar {
+div.nav-avatar {
     display: flex;
     justify-content: space-between;
-} */
+}
 
-/* change color and border radius to dropdown btn */
-/* div.dd-btn {
-    border-radius: 100px;
-} */
-
-div.dropdown img.avatar-img {
+div.avatar div.dropdown img.avatar-img {
     max-width: 25px;
     border-radius: 50%;
+}
+
+div.avatar div.dropdown .round-btn {
+    border-radius: 50px;
+    height: 38px;
 }
 
 /* -------> ALBUM INFO ROW <--------- */

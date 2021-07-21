@@ -16,11 +16,76 @@
 
   <body>
     <body>
-      <div class="container-fluid"> <!--tutto il body -->
-        <div class="row">
+      <div class="container-fluid px-0">
+        <!-- ALT NAVBAR -->
+        <div class="alt-navbar">
+          <nav class="navbar navbar-expand-lg navbar-dark navbar-alt-color">
+            <div class="spotify-logo">
+              <img src="assets/spotify-logo.png" alt="spotify logo">
+             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"><i class="bi bi-house-door"></i> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-search"></i> Search</a></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-bookmarks"></i> Your Library</a></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="assets/plus.jpg" alt=""> Create Playlist</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="assets/heart.jpg"  style="width: 32px" alt=""> Liked Songs</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-music-note-beamed"></i> Your Favorite Genres 
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Funky Heavy Bluesy</a>
+                    <a class="dropdown-item" href="#">Metal Ballads</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Jazz Classic Blue Note Edition</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="false">
+                    <i class="bi bi-cloud-arrow-down"></i> Install App</a>
+                </li>
+              </ul>
+              <!-- Avatar -->
+              <div class="avatar">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle round-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/diego.jpg" class="avatar-img" alt="avatar"> Diego 'Ziba' Banovaz
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Your Profile</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- / ALT NAVBAR -->
+      </div>
+
+
+      <div class="container-fluid px-lg-0"> <!--tutto il body -->
+        
+        <div class="row no-gutters">
 
           <!-- |----------------- Sidebar -----------------| -->
-          <div class="col-2 p-0">
+          <div class="col-0 col-lg-2">
             <div class="sidebar">
              <div class="spotify-logo">
                <img src="assets/spotify-logo.png" alt="spotify logo">
@@ -93,36 +158,39 @@
 
   
           <!-- |----------------- Right column (main content) -----------------| -->
-          <div class="col-10 p-0">
+          <div class="col col-lg-10">
             <div class="container--main px-0"> <!-- *** -->
   
               <!-- |----------------- Navbar (avatar) -----------------| -->
-              <div class="container nav-avatar d-flex justify-content-between px-2 px-md-3"> <!-- *** ★★★-->
-                <!--freccette-->
-                <div class="arrows text-white">
-                  <i class="bi bi-arrow-left-circle-fill"></i>
-                  <i class="bi bi-arrow-right-circle-fill"></i>
-                </div> 
-  
-                <!--avatar/ log-in-->
-                <div class="avatar">
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" style="border-radius: 12rem;"> <!--Fix inline style anche per padding e bg-color!!!!-->
-                      <img src="assets/diego.jpg" class="avatar-img" alt="avatar">Diego "Ziba" Banovaz
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                      <li><a class="dropdown-item active" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                    </ul>
+              <!--arrows and avatar-->
+            <div class="container nav-avatar py-2 py-lg-3 px-3">
+              <!--freccette-->
+              <div class="arrows text-white">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+                <i class="bi bi-arrow-right-circle-fill"></i>
+              </div> 
+
+               <!--avatar/ log-in-->
+               <div class="avatar">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle round-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/diego.jpg" class="avatar-img" alt="avatar"> Diego 'Ziba' Banovaz
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Your Profile</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
                   </div>
                 </div>
-              </div> <!--container flex-->
+              </div>
+
+            </div> <!--container flex-->
               <!-- |----------------- Navbar (avatar) end -----------------| -->
               
 
               <!-- WORKSPACE START -->
               <!-- |----------------- Album overview -----------------| -->
-              <div class="container album-overview px-2 px-md-3 mb-3">
+              <div class="container album-overview px-2 px-md-3 mt-2 mb-3">
                 <div class="row mx-0">
                   <div class="col-3 px-0">
                     <div class="album-cover">
