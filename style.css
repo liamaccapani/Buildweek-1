@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 :root {
     --grey-text: rgb(160, 160, 160);
     --bg-hover: rgba(128, 128, 128, 0.604);
@@ -7,7 +9,7 @@
 }
 
 body {  /* purple line over nowplaying!!!!! */
-    font-size: Helvetica, Arial-sans;
+    font-family: 'Didact Gothic', sans-serif;
     /* background: var(--bg-body); */
     background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(201, 184, 180) 100%);
 }
