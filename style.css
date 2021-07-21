@@ -16,6 +16,19 @@ body {
     background-color: black;
 }
 
+.alt-navbar ul li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.alt-navbar ul li:hover {
+    background-color: var(--bg-hover);  
+}
+
+.alt-navbar ul li a:hover {
+    color: white;
+}
+
 /* -------> SIDEBAR <--------- */
 
 .sidebar {
