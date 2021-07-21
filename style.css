@@ -69,13 +69,13 @@ body {
     height: 100%;
 }
 
- .sidebar div.genres-menu ul li { /* why without a works - color ellipsis dots*/
+.sidebar div.genres-menu ul li { /* why without a works - color ellipsis dots*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--grey-text);
     width: 200px;
- }
+}
 
 .sidebar .install-app {
     /* position: absolute; */
@@ -96,6 +96,20 @@ body {
     background-color: var(--bg-hover);
     color: white;
 }
+
+/* @media (max-width: 250px) {
+    .sidebar {
+      display: none;
+    }
+
+} */
+
+/* @media (min-width: 575px) {
+    .sidebar {
+        display: inline;
+    }
+} */
+
 
 /* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
 
@@ -126,31 +140,40 @@ div.dropdown img.avatar-img {
 }
 
 
+.icons-volume {
+    width: 25%;
+}
+
+
+
+
  .album-img img {
     object-fit: cover;
     width: 50px;
     height: 50px;
 }
 
-
- .container--nowplay .song-info h6 {
-     /*display: -webkit-box;
+.container--nowplay .song-info h6 {
+    /* display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
-    overflow: hidden;          no need for width */
+    overflow: hidden; */      /* no need for width */
     font-size: 0.9rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 250px;  /* doesn't work without WIDTH */
+    width: 250px; /* doesn't work without WIDTH */
 }
 
 .container--nowplay .song-info p {
     font-size: 0.7rem;
 }
 
+.controllers-progress {
+    width: 50%;
+}
 
-div.play-btn {
+button.play-btn {
     background-color: white;
     width: 2rem;
     height: 2rem;
@@ -159,7 +182,7 @@ div.play-btn {
     top: 8px;
 }
 
-div.play-btn:after {
+button.play-btn:after {
     content: '';
     width: 0; /* make the container collapse */
     height: 0;
@@ -176,14 +199,19 @@ div.play-btn:after {
 
 /* width??*/
  .container--nowplay .progress {
+    width: 90%;
     background-color: var(--grey-text);
     height: 2px;
 }
 
+
+
 .volume-icons .volume-bar {
+    width: 20%;
     background-color: var(--grey-text);
     height: 2px;
 }
+
 
 
 /* Triangle trick:
