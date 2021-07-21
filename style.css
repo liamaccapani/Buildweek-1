@@ -148,22 +148,44 @@ div.dropdown img.avatar-img {
     bottom: 0;
     left: 0;
     background-color: rgba(34, 33, 33, 0.364);
-
 }
 
-.title-section {
+.title-th {
     color: var(--grey-text);
     border-bottom: 1px solid var(--grey-text);
 }
 
-.title-section span.title {
+.title-th span.title {
     font-size: .8rem;
     font-weight: bold;
 }
 
+
 .tracklist {
     color: var(--grey-text);
 }
+
+.track--container {
+    width: 100%;
+}
+
+.track--container .track-num-title {
+    width: 90%;
+    
+}
+
+.track--container .track-num-title h6.track-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.track--container .track-num-title p.track-artist {
+    font-size: .8rem;
+}
+
+
+
+
 
 
 
