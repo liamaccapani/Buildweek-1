@@ -204,14 +204,14 @@ button.play-btn:after {
     margin: auto;
 }
 
-.pause--btn {
+/* .pause--btn {
     background-color: white;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
     position: relative;
     top: 0px;
-}
+} */
 
 /* width --> sistema dopo span e aggiungi a media queries se necessario */
  .container--nowplay .progress {
