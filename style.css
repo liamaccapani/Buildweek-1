@@ -22,6 +22,12 @@ hr {
 }
 
 /* -------------< SOCIAL LOG-IN >------------- */
+.social-buttons, 
+.break-container,
+.login-form,
+.account {
+    max-width: 60%;
+}
 .social-buttons p {
     font-size: .8rem;
     font-weight: bolder;
@@ -55,6 +61,14 @@ hr {
 
 .social-buttons button.btn--apple {
     background-color: black;
+}
+
+/* -------------< OR >------------- */
+.break-container .left-line,
+.break-container .right-line {
+    width: 100%;
+    height: 1px;
+    background-color: grey;
 }
 
 /* -------------< LOG-IN FORM >------------- */
@@ -116,7 +130,7 @@ footer.privacy-settings a:hover {
     color: var(--spotify-green);
 }
 
-@media (min-width: 300px) {
+/* @media (min-width: 300px) {
     .social-buttons, 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
@@ -126,11 +140,11 @@ footer.privacy-settings a:hover {
     }
 }
 
-@media (min-width: 499px) { 
+@media (min-width: 400px) { 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
     .account button.btn--sign-up {
-      width: 70%;
+      width: 65%;
     }
 }
 
@@ -138,25 +152,19 @@ footer.privacy-settings a:hover {
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
     .account button.btn--sign-up {
-      width: 60%;
-    }
-}
-
-@media (min-width: 799px) { 
-    .social-buttons button.btn--facebook,
-    .social-buttons button.btn--apple,
-    .account button.btn--sign-up {
       width: 50%;
     }
 }
+
+
 
 @media (min-width: 909px) { 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
     .account button.btn--sign-up {
-      width: 40%;
+      width: 35%;
     }
-}
+} */
 
 
 
