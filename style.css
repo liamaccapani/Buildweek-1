@@ -5,6 +5,7 @@
     --bg-hover: rgba(128, 128, 128, 0.604);
     --bg-body: rgb(18, 18, 18);
     --bg-nowplay: rgb(24, 24, 24);
+    --spotify-green: rgb(29, 185, 84);
 }
 
 body {
@@ -163,7 +164,8 @@ div.avatar div.dropdown .round-btn {
     height: 38px;
 }
 
-/* -------> NOW PLAYING <--------- */ 
+/* -------> NOW PLAYING <--------- */
+
 .progress-bar-container .right-min,
 .progress-bar-container .left-min {
     font-size: .7rem;
@@ -200,6 +202,15 @@ button.play-btn:after {
     bottom: 0;
     left: 3px;
     margin: auto;
+}
+
+.pause--btn {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
 }
 
 /* width --> sistema dopo span e aggiungi a media queries se necessario */
@@ -403,6 +414,12 @@ button.play-btn:after {
         justify-content: flex-end;
         align-items: center;
         width: 40%;
+    }
+}
+
+@media (min-width: 1125px) {
+    .album-img {
+        width: 12%;
     }
 }
 
