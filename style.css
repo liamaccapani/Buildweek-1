@@ -37,7 +37,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     /* align-content: flex-start; */
-    height: 90vh;
+    height: 90%;
     contain: content;
     font-size: 0.9rem;
     background-color: black;
@@ -76,7 +76,6 @@ body {
 .sidebar ul li a:hover {
     color: white;
 }
-
 
 .sidebar div.playlist-menu { /* touching the borders of the div */
     border-bottom: 1px solid var(--grey-text);
@@ -174,10 +173,6 @@ div.avatar div.dropdown .round-btn {
 }
 
 
-.container--nowplay .song-info p {
-    font-size: 0.7rem;
-}
-
 
 button.play-btn {
     background-color: white;
@@ -210,6 +205,7 @@ button.play-btn:after {
     height: 2px;
 }
 
+/* controllare cosa cambia questo */
 .volume-bar .progress {
     width: 80px;
     background-color: var(--grey-text);
@@ -217,17 +213,17 @@ button.play-btn:after {
 
 
 
-@media (min-width: 999px) {
+/* @media (min-width: 999px) {
     .container--nowplay .song-info h6 {
         /* display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width */
+        overflow: hidden; */      /* no need for width
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 200px; /* doesn't work without WIDTH */
+        width: 200px; doesn't work without WIDTH 
     }
 
     .album-img img {
@@ -252,12 +248,12 @@ button.play-btn:after {
         /* display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width */
+        overflow: hidden; */      /* no need for width
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 200px; /* doesn't work without WIDTH */
+        width: 200px; /* doesn't work without WIDTH
     }
 
     .album-img img {
@@ -282,12 +278,12 @@ button.play-btn:after {
         /* display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width */
+        overflow: hidden; */      /* no need for width
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 100px; /* doesn't work without WIDTH */
+        width: 100px; /* doesn't work without WIDTH
     }
 
     .album-img img {
@@ -305,7 +301,7 @@ button.play-btn:after {
         justify-content: center;
         align-items: center;
     }
-}
+} */
 
 @media (max-width: 399px) {
     .album-song-icons {
@@ -381,7 +377,7 @@ button.play-btn:after {
 
     .container--nowplay {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
     }
@@ -421,10 +417,10 @@ button.play-btn:after {
     }
 
     .song-icons .bi-laptop {
-        display: none;
+        display: inline;
     }
 
-    .controllers-progress .progress-bar-container,
+    .progress-bar-container,
     .volume-section {
         display: none;
     }
@@ -436,6 +432,78 @@ button.play-btn:after {
     button.play-btn,
     button.pause-btn {
         display: inline;
+    }
+}
+
+@media (min-width: 599px) {
+    .album-song-icons {
+        flex-wrap: nowrap;
+    }
+
+    .container--nowplay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container--nowplay {
+        width: 100%;
+    }
+
+    .container--nowplay .album-song-icons {
+        width: 40%;
+        
+    }
+
+    .container--nowplay .song-info {
+        width: 55%;
+    }
+
+    .container--nowplay .song-info h6, 
+    .container--nowplay .song-info p {
+        /* display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden; */      /* no need for width */
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 90% /* doesn't work without WIDTH */
+    }
+    /* .album-img {
+        width: 15%;
+    }
+
+    .album-img img {
+        width: 100%;
+        height: 100%;
+    } */
+
+    .controllers-progress {
+        width: 40%;
+    }
+    .progress-bar-container {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+
+    }
+
+    .controllers-progress {
+        width: 40%;
+    }
+
+    button.play-btn,
+    button.pause-btn {
+        display: inline;
+    }
+
+    .volume-section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
     }
 }
 
