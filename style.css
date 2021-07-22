@@ -163,7 +163,11 @@ div.avatar div.dropdown .round-btn {
     height: 38px;
 }
 
-/* -------> NOW PLAYING <--------- */ /* general layout, progress bar width, flex not working properly */
+/* -------> NOW PLAYING <--------- */ 
+.progress-bar-container .right-min,
+.progress-bar-container .left-min {
+    font-size: .7rem;
+}
 
 /* general layout */
  div.container--nowplay {
@@ -173,8 +177,6 @@ div.avatar div.dropdown .round-btn {
     color: var(--grey-text);
     background-color: var(--bg-nowplay);
 }
-
-
 
 button.play-btn {
     background-color: white;
@@ -213,98 +215,6 @@ button.play-btn:after {
     background-color: var(--grey-text);
 }
 
-
-
-/* @media (min-width: 999px) {
-    .container--nowplay .song-info h6 {
-        /* display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width
-        font-size: 0.9rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 200px; doesn't work without WIDTH 
-    }
-
-    .album-img img {
-        object-fit: cover;
-        width: 50px;
-        height: 50px;
-    }
-
-    .container--nowplay .progress {
-        width: 90%;
-        background-color: var(--grey-text);
-        height: 2px;
-    }
-
-    .controllers-progress {
-        width: 40%;
-    }
-}
-
-@media (min-width: 700px) {
-    .container--nowplay .song-info h6 {
-        /* display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width
-        font-size: 0.9rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 200px; /* doesn't work without WIDTH
-    }
-
-    .album-img img {
-        object-fit: cover;
-        width: 40px;
-        height: 40px;
-    }
-
-    .controllers-progress {
-        width: 30%;
-    }
-
-    .volume-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media (max-width: 699px) {
-    .container--nowplay .song-info h6 {
-        /* display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width
-        font-size: 0.9rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100px; /* doesn't work without WIDTH
-    }
-
-    .album-img img {
-        object-fit: cover;
-        width: 20px;
-        height: 20px;
-    }
-
-    .controllers-progress {
-        width: 10%;
-    }
-
-    .volume-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-} */
-
 @media (max-width: 399px) {
     .album-song-icons {
         flex-wrap: nowrap;
@@ -342,8 +252,9 @@ button.play-btn:after {
         text-overflow: ellipsis;
         width: 85% /* doesn't work without WIDTH */
     }
+
     .album-img {
-        width: 20%;
+        width: 15%;
     }
 
     .album-img img {
@@ -451,6 +362,10 @@ button.play-btn:after {
         width: 40%;
     }
 
+    .album-img {
+        width: 15%;
+    }
+
     .container--nowplay .song-info {
         width: 55%;
     }
@@ -490,6 +405,8 @@ button.play-btn:after {
         width: 40%;
     }
 }
+
+
 
 
 

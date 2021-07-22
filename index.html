@@ -249,13 +249,13 @@
         </div>
   
         <div class="song-icons">
-          <i class="bi bi-heart px-2 px-sm-1"></i> <!-- ✿✿✿✿✿✿ -->
+          <i class="bi bi-heart px-2 px-sm-1" ></i>  <!-- ✿✿✿✿✿✿ -->
           <i class="bi bi-laptop"></i>
         </div>
 
       </div>
 
-      <div class="controllers-progress"> <!-- ✿✿✿✿✿✿ tolto flex -->
+      <div class="controllers-progress d-flex flex-column justify-content-evenly align-items-center"> <!-- ✿✿✿✿✿✿ rimesso flex -->
         <!--controllers-->
         <div class="controllers-icons d-flex justify-content-center align-items-center"> <!-- ✿✿✿✿✿✿ -->
           <div class="left-side pr-2">
@@ -274,9 +274,11 @@
         
         
         <div class="progress-bar-container"> <!-- ✿✿✿✿✿✿ aggiunto container -->
+          <span class="right-min pr-1">0:00</span>
           <div class="progress my-2"> <!-- ✿✿✿✿✿✿ mt 2 => my-2 -->
             <div id="seekbar" class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <span class="left-min pl-1">5:00</span>
         </div>
         
       </div> <!-- /controllers-progress-->
@@ -289,7 +291,7 @@
           <i class="bi bi-volume-up"></i>
         </div>
   
-  
+        
         <div class="volume-bar">
           <div class="progress"> <!-- ✿✿✿✿✿✿ tolto mt 2 -->
             <div id="seekbar" class="progress-bar volume-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -317,6 +319,9 @@
          audioToPlay.pause()
        }
       }
+
+      audioToPlay.ontimeupdate()
+    
     </script>
 
 
