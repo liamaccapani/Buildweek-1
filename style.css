@@ -11,8 +11,8 @@ body {
     font-family: 'Didact Gothic', sans-serif;
     background-color: white;
 }
-
-
+ 
+/* -------------< LOGO >------------- */
 .logo-container img.logo {
    max-width: 10rem;
 }
@@ -21,6 +21,7 @@ hr {
     border: .5px solid var(--border-grey);
 }
 
+/* -------------< SOCIAL LOG-IN >------------- */
 .social-buttons p {
     font-size: .8rem;
     font-weight: bolder;
@@ -33,7 +34,6 @@ hr {
     font-size: .8rem;
     font-weight: 600;
     color: white;
-    padding: .5rem 5rem; /* fine until 400px, then on smaller viewport it's too chonky. media query?? FIX RESPONSIVENESS */
 }
 
 /* .social-buttons button.btn--facebook:hover,    animation???
@@ -57,17 +57,7 @@ hr {
     background-color: black;
 }
 
-
-/* div.left-line, div.right-line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--border-grey);
-} */
-
-/* .login-form {
-    border-bottom: 1px solid var(--border-grey);
-} */
-
+/* -------------< LOG-IN FORM >------------- */
 .login-form .email-input,               /* FIX RESPONSIVENESS, focus?? */
 .login-form .password-input {
     width: 300px;
@@ -79,8 +69,7 @@ hr {
     font-size: .8rem;
     font-weight: 600;
     color: white;
-    padding: .5rem 3rem;
-    
+    padding: .5rem 3rem;  
 }
 
 .checkbox-container button.btn--spotify {
@@ -96,6 +85,7 @@ hr {
     font-weight: bold;
 }
 
+/* -------------< CREATE ACCOUNT >------------- */
 .account p {
     font-size: 1rem;
     font-weight: bolder;
@@ -108,7 +98,6 @@ hr {
     font-weight: 600;
     background-color: transparent;
     border-color: rgb(44, 44, 44);
-    padding: .5rem 5rem;
 }
 
 .account .btn--sign-up a {
@@ -126,6 +115,26 @@ footer.privacy-settings a:hover {
     text-decoration: none;
     color: var(--spotify-green);
 }
+
+/* @media (min-width: 300px) {
+    .social-buttons, 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account, 
+    .account button.btn--sign-up {
+      width: 100%;
+    }
+}
+
+@media (min-width: 301px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up {
+      width: 60%;
+    }
+} */
+
+
 
 
 

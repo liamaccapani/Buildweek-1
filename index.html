@@ -21,8 +21,7 @@
 
     <hr/>
 
-    <section class="container-fluid d-flex flex-column justify-content-center align-items-center"> <!--FLEX-->
-      <div class="social-buttons">
+    <section class="social-buttons container-fluid d-flex flex-column justify-content-center align-items-center"> <!--FLEX-->
         <p class="text-center">To continue, login to Spotify</p>
         <button type="button" class="btn btn-lg btn-block btn--facebook">
           <i class="bi bi-facebook pr-2"></i><a href="#">continue with facebook</a>
@@ -30,14 +29,24 @@
         <button type="button" class="btn btn-lg btn-block btn--apple">
           <i class="bi bi-command pr-2"></i><a href="#">continue with apple</a>
         </button>
-      </div>
     </section>
 
     <section class="break-container container d-flex flex-row justify-content-center align-items-center"> <!--FLEX-->
-      <div class="break">
-        <div class="left-line align-self-start"></div>  <!--NOT INLINE-->
-        <p class="">OR</p>
-        <div class="right-line align-self-end"></div> <!--NOT INLINE-->
+      <div class="container break">
+        <div class="row">
+          <div class="col">
+            <div class="left-line align-self-start"></div>
+          </div>  <!--NOT INLINE-->
+
+          <div class="col">
+            <p class="">OR</p>
+          </div>
+
+          <div class="col">
+            <div class="right-line align-self-end"></div> <!--NOT INLINE-->
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -55,24 +64,25 @@
         <button type="button" class="btn btn-lg  btn--spotify">
           <a href="#">log in</a>
         </button>
-
       </div>
 
-      <p class="green-text pt-3 pb-5">
+      <p class="green-text pt-3 mb-4 mb-md-5">
         Forgot your password?
       </p>
 
     </section>
 
-    <section class="account d-flex flex-column justify-content-center align-items-center">
-      <p>Don't have an account?</p>
-      <button type="button" class="btn btn-lg btn--sign-up">
-        <a href="#">sign up for spotify</a>
-      </button>
+    <section class="account container d-flex flex-column justify-content-center align-items-center">
+      
+        <p class="py-3 mb-0">Don't have an account?</p>
+        <button type="button" class="btn btn-lg btn--sign-up">
+          <a href="#">sign up for spotify</a>
+        </button>
+      
 
     </section>
 
-    <footer class="privacy-settings container d-flex flex-column justify-content-center align-items-center pt-4">
+    <footer class="privacy-settings container d-flex flex-column justify-content-center align-items-center mt-4 mb-2">
       <p>If you click "log in with Facebook" and are not a Spotify user, you will be registered and
         you agree to Spotify's <a href="#"class="green-text">Terms & Conditions</a> and
         <a href="#" class="green-text">Privacy policy</a>
