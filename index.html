@@ -79,11 +79,11 @@
     </div>
 
 
-    <div class="container-fluid px-lg-0"> 
+    <div class="container-fluid px-lg-0"> <!--Body -->
 
-      <div class="row no-gutters">
+      <div class="row no-gutters"> <!-- ✿✿✿✿✿✿ -->
         <!--Sidebar-->
-        <div class="col-0 col-lg-2">                         <!-- ✿✿✿✿✿✿ -->
+        <div class="col-0 col-lg-2">    <!-- ✿✿✿✿✿✿ -->
           <div class="sidebar">
            <div class="spotify-logo">
              <img src="assets/spotify-logo.png" alt="spotify logo">
@@ -151,10 +151,10 @@
 
           </div> <!--sidebar-->
           
-        </div> <!--col sidebar-->
+        </div> <!--/ col sidebar-->
 
-        <!--Container all cards and rows-->
-        <div class="col col-lg-10">                             <!-- ✿✿✿✿✿✿ -->
+        <!--Right colum -->
+        <div class="col col-lg-10">   <!-- ✿✿✿✿✿✿ -->
           <div class="container-fluid container--main">
 
             <!--arrows and avatar-->
@@ -230,10 +230,9 @@
                 <div class="row"></div>
               </div>
           </div>
-        </div> <!--col main-->
-
-      </div> <!--row-->
-    </div> <!--container-fluid-->
+        </div> <!-- / col main-->
+      </div> <!--/ row no gutters-->
+    </div> <!--/ body-->
     
 
     <!--Container now playing-->
@@ -258,15 +257,14 @@
 
       <div class="controllers-progress"> <!-- ✿✿✿✿✿✿ tolto flex -->
         <!--controllers-->
-        <div class="controllers-icons d-flex justify-content-center align-items-center">      <!-- ✿✿✿✿✿✿ -->
+        <div class="controllers-icons d-flex justify-content-center align-items-center"> <!-- ✿✿✿✿✿✿ -->
           <div class="left-side pr-2">
             <i class="bi bi-shuffle"></i>
             <i class="bi bi-skip-start-fill"></i>
           </div>
 
-          <audio id="player" src="assets/audio-sample.mp3"></audio>
+          <audio id="player" src="assets/audio-sample.mp3"></audio> <!-- ✿✿✿✿✿✿ -->
           <button onclick="playAudio(event)" id="play-me" class="play-btn"></button>
-          <button onclick="pauseAudio(event)" id="pause-me" class="pause-btn"></button>
           
           <div class="right-side pl-2">
             <i class="bi bi-skip-end-fill"></i>
@@ -281,8 +279,9 @@
           </div>
         </div>
         
-      </div>
-                <!-- ✿✿✿✿✿✿ icons-volume => volume section -->
+      </div> <!-- /controllers-progress-->
+
+        <!-- ✿✿✿✿✿✿ "icons-volume" => "volume section -->
       <div class="volume-section pr-1"> <!-- ✿✿✿✿✿✿ aggiunto pr-1 -->
         <div class="volume-icons px-2"> <!-- ✿✿✿✿✿✿ pr 2 => px-2 -->
           <i class="bi bi-text-indent-left"></i>
@@ -309,27 +308,15 @@
      let audioToPlay = document.getElementById('player')
      
      let playAudio = function() {
-       audioToPlay.play()
-     }
-
-     let pauseAudio = function() {
-       audioToPlay.pause()
-     }
-      
-      // var myAudio = document.getElementById("myAudio");
-      // var isPlaying = false;
-
-      // function togglePlay() {
-      //   isPlaying ? myAudio.pause() : myAudio.play();
-      // };
-
-      // myAudio.onplaying = function() {
-      //   isPlaying = true;
-      // };
-
-      // myAudio.onpause = function() {
-      //   isPlaying = false;
-      // };
+       let playButton = document.getElementById('play-me')
+       playButton.classList.toggle('playing')
+       
+       if (playButton.classList.contains('playing') === true) {
+         audioToPlay.play()
+       } else {
+         audioToPlay.pause()
+       }
+      }
     </script>
 
 

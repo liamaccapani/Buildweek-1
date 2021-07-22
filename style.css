@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 :root {
     --grey-text: rgb(160, 160, 160);
     --bg-hover: rgba(128, 128, 128, 0.604);
@@ -6,7 +8,7 @@
 }
 
 body {
-    font-size: Helvetica, Arial-sans;
+    font-family: 'Didact Gothic', sans-serif;
     background-color: var(--bg-body); /* gradient al main! */
 }
 
@@ -37,7 +39,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     /* align-content: flex-start; */
-    height: 90%;
+    height: 90vh;         /* sistemare altezza con diversi viewport */          
     contain: content;
     font-size: 0.9rem;
     background-color: black;
@@ -379,7 +381,6 @@ button.play-btn:after {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
 
     .container--nowplay {
@@ -397,10 +398,6 @@ button.play-btn:after {
 
     .container--nowplay .song-info h6, 
     .container--nowplay .song-info p {
-        /* display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width */
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: hidden;
@@ -452,7 +449,6 @@ button.play-btn:after {
 
     .container--nowplay .album-song-icons {
         width: 40%;
-        
     }
 
     .container--nowplay .song-info {
@@ -461,24 +457,12 @@ button.play-btn:after {
 
     .container--nowplay .song-info h6, 
     .container--nowplay .song-info p {
-        /* display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;  
-        overflow: hidden; */      /* no need for width */
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         width: 90% /* doesn't work without WIDTH */
     }
-    /* .album-img {
-        width: 15%;
-    }
-
-    .album-img img {
-        width: 100%;
-        height: 100%;
-    } */
 
     .controllers-progress {
         width: 40%;
