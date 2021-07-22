@@ -116,7 +116,7 @@ footer.privacy-settings a:hover {
     color: var(--spotify-green);
 }
 
-/* @media (min-width: 300px) {
+@media (min-width: 300px) {
     .social-buttons, 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
@@ -126,13 +126,37 @@ footer.privacy-settings a:hover {
     }
 }
 
-@media (min-width: 301px) { 
+@media (min-width: 499px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up {
+      width: 70%;
+    }
+}
+
+@media (min-width: 699px) { 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
     .account button.btn--sign-up {
       width: 60%;
     }
-} */
+}
+
+@media (min-width: 799px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up {
+      width: 50%;
+    }
+}
+
+@media (min-width: 909px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up {
+      width: 40%;
+    }
+}
 
 
 
