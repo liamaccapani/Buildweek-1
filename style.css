@@ -177,7 +177,7 @@ body {
     }
 }
 
-/* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
+/* -------> NAV-AVATAR <--------- */
 
 div.nav-avatar {
     display: flex;
@@ -242,7 +242,6 @@ button.play-btn:after {
     margin: auto;
 }
 
-/* width --> sistema dopo span e aggiungi a media queries se necessario */
  .container--nowplay .progress {
     width: 90%;
     background-color: var(--grey-text);
@@ -451,16 +450,6 @@ button.play-btn:after {
         width: 12%;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
