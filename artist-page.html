@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="artist-style.css">
     
     <title>Buildweek - Spotify</title>
   </head>
@@ -80,7 +80,7 @@
       </div>
 
 
-      <div class="container-fluid px-lg-0"> <!--tutto il body -->
+      <div class="container-fluid px-0"> <!--tutto il body -->
         
         <div class="row no-gutters">
           <!-- |----------------- Sidebar -----------------| -->
@@ -145,7 +145,7 @@
                 </ul>
               </div>
   
-              <div class="install-app p-1 mb-xl-2">  <!-- ✿✿✿✿✿✿ added mb-xl-2 -->
+              <div class="install-app p-1">  <!-- ✿✿✿✿✿✿ added mb-xl-2 -->
                 <i class="bi bi-cloud-arrow-down"></i>
                 <span>Install app</span>
               </div>
@@ -158,11 +158,11 @@
   
           <!-- |----------------- Right column (main content) -----------------| -->
           <div class="col col-lg-10">
-            <div class="container-fluid container--main"> <!-- container--main px-0 -->
+            <div class="container-fluid container--main px-0">
   
               <!-- |----------------- Nav-Avatar -----------------| -->
               <!--arrows and avatar-->
-            <div class="container nav-avatar py-2 py-lg-3 p-0">
+            <div class="nav-avatar container py-2 py-lg-3 px-3">
               <!--freccette-->
               <div class="arrows text-white">
                 <i class="bi bi-arrow-left-circle-fill"></i>
@@ -189,53 +189,57 @@
 
               <!-- WORKSPACE START -->
               <!-- |----------------- Album overview -----------------| -->
-              <div class="container album-overview px-2 px-md-3 mt-2 mb-3">
-                <div class="row mx-0">
-                  <div class="col-3 px-0">
+              <div class="album-overview container mt-2 mb-3">
+                
+                  <div class="album-cover-info d-flex justify-content-start align-items-center">
                     <div class="album-cover">
                       <img src="assets/Pallbearer.jpg" alt="acdc">
                     </div>
-                  </div>
-  
-                  <div class="col-9 px-0">
-            
-                    <div class="album-title d-flex flex-column justify-content-end align-items-start">
-                      <p>ALBUM</p>
-                      <h2>Pallbearer</h2>
-                      
-                    </div>
-            
-                  </div>
 
-                </div> <!--row-->
+                    <div class="album-title d-flex flex-column justify-content-end align-items-start pl-3">
+                      <p class="album mb-0">HEARTLESS</p>
+                      <h2>Pallbearer</h2>
+                      <div class="album-infos-wrapper d-flex justify-content-start align-items-center">
+                        <div class="artist-img">
+                          <img src="assets/diego.jpg" alt="">
+                        </div>
+                        <div class="list pl-2">
+                            <span>Pallbearer</span>
+                            <span>2020</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>              
               </div>
               <!-- |----------------- Album overview end -----------------| -->
 
             
               <!-- |----------------- Play button and icons -----------------| -->
-              <div class="container-fluid black-layer">
-                <div class="container px-0 pt-3 pt-md-4 pb-1 pb-md-2">
-                  <div class="icons--container d-flex justify-content-start align-items-center px-0 px-md-3"> <!-- ★★★ -->
-                      <div class="green-play--btn"></div>
-                      <div class="icons-wrapper mx-2">
-                        <i class="bi bi-heart px-2"></i>
-                        <i class="bi bi-three-dots"></i>
+              <!-- <div class="container-fluid black-layer px-0"></div> -->
+              <div class="album--container black-layer container-fluid px-2 px-0">
+                  <div class="icons--container container-fluid px-0 pt-3 pt-md-4 pb-1 pb-md-2">
+                    <div class="d-flex justify-content-start align-items-center px-0 px-md-3"> <!-- ★★★ -->
+                        <div class="green-play--btn"></div>
+                        <div class="icons-wrapper mx-2">
+                          <i class="bi bi-heart px-2"></i>
+                          <i class="bi bi-three-dots"></i>
+                        </div>
                       </div>
-                  </div>
-                </div>
-              <!-- |----------------- Play button and icons end -----------------| -->
+                 </div>
+                        <!-- |----------------- Play button and icons end -----------------| -->
     
     
-              <!-- |----------------- Title section -----------------| -->
-              <div class="title-th d-flex justify-content-between px-0 px-md-3 py-2"> <!-- ★★★ --> 
+                        <!-- |----------------- Title section -----------------| -->
+                <div class="title-th d-flex justify-content-between px-0 mx-1 mx-md-3 py-2">
                   <span class="title"># TITLE</span>
                   <span><i class="bi bi-clock"></i></span>
-              </div>
-              <!-- |----------------- Title section end -----------------| -->
+                </div>
+            
+                          <!-- |----------------- Title section end -----------------| -->
 
   
-                <!-- |----------------- Album songs -----------------| -->
-                <div class="container tracklist px-0 px-md-3">
+                            <!-- |----------------- Album songs -----------------| -->
+                <div class="tracklist container-fluid px-0 px-md-3">
                   <!--Container row grande con titolo e durata-->
                   <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ --> <!--d-flex justify-content-between align-items-center-->
 
@@ -446,8 +450,7 @@
 
                   </div>
                 </div> <!--all tracks container-->
-                <!-- |----------------- Album songs end -----------------| -->
-              
+                            <!-- |----------------- Album songs end -----------------| -->
               </div>
 
               
@@ -550,7 +553,7 @@
       heart.addEventListener('click', function() {
         heart.classList.toggle('green')
       })
-    
+  
     </script>
 
 

@@ -9,9 +9,9 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Didact Gothic', sans-serif;
-    /* background: var(--bg-body); */
-    background: linear-gradient(0deg, var(--bg-body) 0%, var(--bg-nowplay) 60%, rgb(201, 184, 180) 100%);
+    background: linear-gradient(0deg, var(--bg-body) 0%, rgba(0,0,0,1) 70%, rgb(201, 184, 180) 100%);
 }
 
 /* -------> ALT NAVBAR <--------- */
@@ -131,11 +131,12 @@ body {
     .alt-navbar {
         display: none;
     }
+
 }
 
 @media (max-height: 679px) {
     .sidebar {
-        height: 470px;
+        height: 500px; /* different from feature sidebar ******* */
         position: relative;
     }
 
@@ -165,7 +166,7 @@ body {
 
 @media (min-height: 799px) {
     .sidebar {
-        height: 720px;
+        height: 700px;
     }
 }
 
@@ -186,13 +187,21 @@ div.avatar div.dropdown .round-btn {
     height: 38px;
 }
 
-/* -------> ALBUM INFO ROW <--------- */
+/* -------> ALBUM INFO <--------- */
+
+.album-cover-info .album-cover {
+    width: 25%;
+}
+
+.album-cover-info .album-title {
+    width: 75%;
+}
 
 .album-cover img {
-    object-fit: cover;
-    width: 10rem; 
+    width: 100%;
     box-shadow: 0px 0px 20px -1px black;
 }
+
 
 .album-infos-wrapper img {
     object-fit: cover;
@@ -200,24 +209,31 @@ div.avatar div.dropdown .round-btn {
     border-radius: 50%;
 }
 
+.album-infos-wrapper .list span {
+    font-size: .8rem;
+}
+
 .album-overview {
     color: white;
 }
 
 
-
+/* -------> BLACK LAYER <--------- */
 .black-layer {
     position: relative;
+    right: 0;
+    left: 0;
 }
 
-.black-layer::before {
+.black-layer::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(34, 33, 33, 0.364);
+    background-color: rgba(44, 43, 43, 0.768);
+    z-index: -1;
 }
 
 .title-th {
@@ -230,7 +246,6 @@ div.avatar div.dropdown .round-btn {
     font-weight: bold;
 }
 
-
 .tracklist {
     color: var(--grey-text);
 }
@@ -240,19 +255,64 @@ div.avatar div.dropdown .round-btn {
 }
 
 .track--container .track-num-title {
-    width: 90%;
-    
+    width: 90%;  
 }
 
-.track--container .track-num-title h6.track-title {
-    font-size: 1rem;
-    font-weight: bold;
+
+@media (max-width: 360px) {
+    .album-cover-info .album-cover {
+        width: 35%;
+    }
+
+    .album-cover-info .album-title {
+        width: 65%;
+    }
+
+    .album-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .album-title p.album,
+    .track-num-title *  {
+        font-size: .8rem;
+    }
+
+    .track--container .track-num-title h6.track-title {
+        font-weight: bold;
+    }
+
 }
 
-.track--container .track-num-title p.track-artist {
-    font-size: .8rem;
+@media (min-width: 361px) {
+    .track--container .track-num-title h6.track-title {
+        font-size: 1rem;
+        font-weight: bold;
+    }
 }
 
+@media (min-width: 999px) {
+    .album-cover-info .album-cover {
+        width: 15%;
+    }
+
+    .album-cover-info .album-title p {
+        font-size: .8rem;
+    }
+
+    .album-cover-info .album-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .track-num-title span,
+    .track-num-title .track-info p {
+        font-size: .8rem;
+    }
+
+    .track-num-title .track-info h6 {
+        font-size: .9rem;
+    }
+
+}
 
 
 /* -------> ICONS CONTAINER <--------- */
@@ -285,7 +345,7 @@ div.avatar div.dropdown .round-btn {
 
 /* -------> NOW PLAYING <--------- */
 
-#heart.green {
+.green {
     color: var(--spotify-green);
 }
 
@@ -510,7 +570,6 @@ button.play-btn:after {
         display: flex;
         justify-content: center;
         width: 90%;
-
     }
 
     .controllers-progress {
