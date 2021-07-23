@@ -249,7 +249,7 @@
         </div>
   
         <div class="song-icons">
-          <i class="bi bi-heart px-2 px-sm-1" ></i>  <!-- ✿✿✿✿✿✿ -->
+          <i id="heart" class="bi bi-heart px-2 px-sm-1"></i>  <!-- ✿✿✿✿✿✿ -->
           <i class="bi bi-laptop"></i>
         </div>
 
@@ -320,6 +320,12 @@
        }
       }
       // audioToPlay.ontimeupdate()
+
+      let heart = document.getElementById('heart')
+      
+      heart.addEventListener('click', function() {
+        heart.classList.toggle('green')
+      })
     
     </script>
 
