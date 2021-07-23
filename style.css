@@ -22,12 +22,12 @@ hr {
 }
 
 /* -------------< SOCIAL LOG-IN >------------- */
-.social-buttons, 
+/* .social-buttons, 
 .break-container,
 .login-form,
 .account {
     max-width: 60%;
-}
+} */
 .social-buttons p {
     font-size: .8rem;
     font-weight: bolder;
@@ -72,9 +72,9 @@ hr {
 }
 
 /* -------------< LOG-IN FORM >------------- */
-.login-form .email-input,               /* FIX RESPONSIVENESS, focus?? */
+.login-form .email-input,               
 .login-form .password-input {
-    width: 300px;
+    width: 200px;
 }
 
 .checkbox-container button.btn--spotify {
@@ -130,7 +130,8 @@ footer.privacy-settings a:hover {
     color: var(--spotify-green);
 }
 
-/* @media (min-width: 300px) {
+
+@media (min-width: 300px) {
     .social-buttons, 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
@@ -157,14 +158,14 @@ footer.privacy-settings a:hover {
 }
 
 
-
 @media (min-width: 909px) { 
     .social-buttons button.btn--facebook,
     .social-buttons button.btn--apple,
-    .account button.btn--sign-up {
+    .account button.btn--sign-up,
+    .break-container {
       width: 35%;
     }
-} */
+}
 
 
 
