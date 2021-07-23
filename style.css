@@ -35,12 +35,11 @@ body {
 /* -------> SIDEBAR <--------- */
 
 .sidebar {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* align-content: flex-start; */
-    height: 90vh;         /* sistemare altezza con diversi viewport */          
+    align-content: flex-start; */          
     contain: content;
     font-size: 0.9rem;
     background-color: black;
@@ -86,8 +85,8 @@ body {
 
 .sidebar div.genres-menu ul {
     overflow-y: scroll;
-    max-height: 400px;
-    height: 100%;
+    height: 400px;
+    /* height: 100%; */
 }
 
 .sidebar div.genres-menu ul li { /* why without a works - color ellipsis dots*/
@@ -95,7 +94,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--grey-text);
-    width: 200px;
+    max-width: 200px;
 }
 
 .sidebar .install-app {
@@ -103,7 +102,7 @@ body {
     background-color: black;
     color: var(--grey-text);
     font-weight: bolder;
-    height: 1.5rem;
+    /* height: 1.5rem; */
     /* align-self: center; */
     /* display: flex; */
     /* justify-content: center;
@@ -141,6 +140,42 @@ body {
     }
 }
 
+@media (max-height: 679px) {
+    .sidebar {
+        height: 470px;
+        position: relative;
+    }
+
+    .sidebar .install-app {
+        position: fixed;
+        bottom: 0px;
+        left: 12px;
+        right: 0;
+        height: 30px;
+    }
+}
+
+@media (min-height: 680px) {
+    .sidebar {
+        height: 540px;
+        /* position: relative; */
+    }
+
+    .sidebar .install-app {
+        position: fixed;
+        bottom: 0px;
+        left: 12px;
+        right: 0;
+        height: 30px;
+    }
+
+}
+
+@media (min-height: 799px) {
+    .sidebar {
+        height: 720px;
+    }
+}
 
 /* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
 
@@ -203,15 +238,6 @@ button.play-btn:after {
     left: 3px;
     margin: auto;
 }
-
-/* .pause--btn {
-    background-color: white;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    position: relative;
-    top: 0px;
-} */
 
 /* width --> sistema dopo span e aggiungi a media queries se necessario */
  .container--nowplay .progress {
