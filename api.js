@@ -18,7 +18,7 @@ function getMusic(){
 
     }).then((jsonDerulo) => { //aka response.json() content
         console.log(jsonDerulo) //undefined if no return
-        //OUTPUT {id: 3279621, name: "Pallbearer", link: "https://www.deeze...}
+        //OUTPUT {data: Array(25), total: 286, next: "https://api.deezer.com/sear...}
 
         console.log(jsonDerulo.data)
         
