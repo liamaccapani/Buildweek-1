@@ -2,6 +2,7 @@
 let albums = [] 
 let error = false
 const row = document.querySelector('.trendingRow')
+const parentDiv = document.querySelector('#tracklist-container') //album page
 
 window.onload = () => {
  getMusic('eminem')
@@ -42,19 +43,40 @@ function getMusic(query){
 function displayAlbums(array){
   array.forEach(element => {
     row.innerHTML += `
-    <div class="col album-card px-1">
-      <div class="album-card-content">
-        <img src=${element.album.cover} alt="${element.album.title}">
-        <h5>${element.album.title}</h5>
-        <p>${element.artist.name}</p>
+    <a class="album-card" href="album-api.html?albumId=${element.id}">
+      <div id="${element.id}" class="col album-card px-1">
+        <div class="album-card-content" href="album-api.html">
+          <img src=${element.album.cover} alt="${element.album.title}">
+          <h5>${element.album.title}</h5>
+          <p>${element.artist.name}</p>
+        </div>
       </div>
-    </div>
+    </a>
     `
   });
 }
 
-// function displayAlbums(array){
+// function singleAlbum(element){
+//   parentDiv.innerHTML = `
+//     <div id="${element.id}" class="track--container d-flex justify-content-between align-items-center my-2">
+//       <div class="track-num-title">
+//       <div class="row align-items-center pt-1">
+//         <div class="col-1 track-number"> <!--numero-->
+//           <span>1</span>
+//         </div>
+//         <div class="col track-info px-0"> <!--titolo e artista-->
+//           <h6 class="track-title mb-0">${song.title}</h6>
+//           <p class="track-artist mb-0">${song.artist.name}</p>
+//         </div>
+//       </div>
+//       </div>
 
+//       <div class="track-length">
+//       <span>${song.duration}</span>
+//       </div>
+//     </div>
+//     `
+//     return parentDiv
 // }
 
 
