@@ -1,9 +1,9 @@
 window.onload = () => {
-    getMusic()
+    getMusic('dark side of the moon')
 }
 
-function getMusic(){
-    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=master%20of%20puppets", {
+function getMusic(query){
+    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + query, {
               "method": "GET",
               "headers": {
               "x-rapidapi-key": "9f5552359cmshed56aa6a434c099p12c1f9jsn9f075b9c7b2d",
