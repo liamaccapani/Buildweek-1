@@ -23,13 +23,13 @@ function getMusic(query){
         return response.json() // ✨ return ✨
 
     })
-    .then((jsonAlbum) => { //aka response.json() content
-        if(jsonAlbum.data){
-            //console.log(jsonAlbum) //undefined if no return
+    .then((jsonAlbums) => { //aka response.json() content
+        if(jsonAlbums.data){
+            //console.log(jsonAlbums) //undefined if no return
             //OUTPUT {data: Array(25), total: 286, next: "https://api.deezer.com/sear...}
-            console.log(jsonAlbum.data)
+            console.log(jsonAlbums.data)
 
-            displayTracks(jsonAlbum.data)
+            displayTracks(jsonAlbums.data)
 
         } else {
             //quota limit error = promise is resolved, but i still have an error. to catch it I can set it to false and change its value here and in catch
@@ -44,28 +44,6 @@ function getMusic(query){
 }
 
 function displayTracks (array){
-    // array.map(track => {
-    //     parentDiv.innerHTML += `
-    //         <div class="track--container d-flex justify-content-between align-items-center my-2">
-    //             <div class="track-num-title">
-    //                 <div class="row align-items-center pt-1">
-    //                     <div class="col-1 track-number"> <!--numero-->
-    //                       <span>1</span>
-    //                     </div>
-    //                     <div class="col track-info px-0"> <!--titolo e artista-->
-    //                       <h6 class="track-title mb-0">${track.title}</h6>
-    //                       <p class="track-artist mb-0">${track.artist.name}</p>
-    //                     </div>
-    //                 </div>
-    //             </div>
-        
-    //             <div class="track-length">
-    //                 <span>${track.duration}</span>
-    //             </div>
-        
-    //         </div>
-    //     `
-    // }).join()
 
     array.forEach(song => {
         // albumOverview.innerHTML = `
@@ -91,7 +69,6 @@ function displayTracks (array){
                     
         // </div>
         // `
-
 
         parentDiv.innerHTML += `
         <div class="track--container d-flex justify-content-between align-items-center my-2">

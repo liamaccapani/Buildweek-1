@@ -82,11 +82,6 @@ function displayAlbums(array){
 
 
 
-
-
-
-
-
 const audioToPlay = document.getElementById('player')
      
 const playAudio = function() {
