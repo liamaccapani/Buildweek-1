@@ -1,3 +1,4 @@
+const albumOverview = document.querySelector('.album-overview')
 const parentDiv = document.querySelector('#tracklist-container')
 let error = false
 
@@ -28,7 +29,7 @@ function getMusic(query){
             //OUTPUT {data: Array(25), total: 286, next: "https://api.deezer.com/sear...}
             console.log(jsonAlbum.data)
 
-            // displayTracks(jsonAlbum.data)
+            displayTracks(jsonAlbum.data)
 
         } else {
             //quota limit error = promise is resolved, but i still have an error. to catch it I can set it to false and change its value here and in catch
@@ -67,6 +68,31 @@ function displayTracks (array){
     // }).join()
 
     array.forEach(song => {
+        // albumOverview.innerHTML = `
+        // <div class="album-cover-info d-flex justify-content-start align-items-center">
+        //     <div class="album-cover">
+        //         <img src="assets/Pallbearer.jpg" alt="acdc">
+        //     </div>
+
+        //     <div class="album-title d-flex flex-column justify-content-end align-items-start pl-3">
+        //         <p class="album mb-0"></p>
+        //         <h2>Pallbearer</h2>
+        //         <div class="album-infos-wrapper d-flex justify-content-start align-items-center">
+        //             <div class="artist-img">
+        //                 <img src="assets/diego.jpg" alt="">
+        //             </div>
+        //         </div>
+
+        //         <div class="list pl-2">
+        //             <span>Pallbearer</span>
+        //             <span>2020</span>
+        //         </div>
+        //     </div>
+                    
+        // </div>
+        // `
+
+
         parentDiv.innerHTML += `
         <div class="track--container d-flex justify-content-between align-items-center my-2">
             <div class="track-num-title">
