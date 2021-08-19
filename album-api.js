@@ -4,7 +4,7 @@ let error = false
 
 window.onload = () =>{
     const query = new URLSearchParams(window.location.search).get('albumId')
-    console.log(query)
+    console.log('the id/query is: ', query)
     getMusic(query)
 }
 

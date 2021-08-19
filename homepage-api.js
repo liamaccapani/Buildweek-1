@@ -25,7 +25,7 @@ function getMusic(query){
     //if promise is resolved and there are no quota limit errors =>
     if(jsonAlbums.data){
       albums = jsonAlbums.data
-      console.log(albums)
+      console.log('The albums are: ', albums)
       displayAlbums(albums)
 
     } else {
